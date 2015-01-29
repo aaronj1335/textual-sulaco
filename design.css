@@ -10,6 +10,7 @@ body {
     margin: 0;
     overflow-x: hidden;
     word-wrap: break-word;
+    letter-spacing: 0.5px;
 }
 
 a {
