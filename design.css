@@ -48,11 +48,6 @@ body[type*=server] #body_home {
     width: 100%;
 }
 
-.sender,
-.time {
-    background: #333;
-}
-
 .sender {
     font-weight: 600;
     overflow: hidden;
