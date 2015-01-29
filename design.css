@@ -71,9 +71,9 @@ body[type*=server] .sender { display: none; }
     -webkit-flex-flow: row;
 }
 
-.line[nickname-type*=myself] .message {
-    background: #2e2e2e;
-}
+/* .line[nickname-type*=myself] span { */
+/*     background: #2e2e2e; */
+/* } */
 
 .line[type*=action] .message,
 .line[type*=action] .sender {
