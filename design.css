@@ -202,6 +202,13 @@ body div#loading_screen {
     text-align: center;
     top: 0;
     z-index: 2;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+#topic_bar:hover {
+  white-space: initial;
 }
 
 #topic_bar a,
