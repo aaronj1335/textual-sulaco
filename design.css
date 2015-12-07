@@ -1,11 +1,10 @@
 @charset "utf-8";
 
 /* Basic Body Structure */
-body {
+html, html body, html body[type] {
     background: #222;
     color: #cfcfcf;
-    font-family: 'Myriad Pro';
-    font-size: 16px;
+    font-family: -apple-system, LucindaGrande, Helvetica, sans-serif;
     line-height: 1.4;
     margin: 0;
     overflow-x: hidden;
