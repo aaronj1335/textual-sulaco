@@ -100,7 +100,7 @@ Sulaco = {
       var nickRe = new RegExp(app.localUserNickname(), 'i');
 
       if (line.getAttribute('type') === 'debug' &&
-          /Disconnect/.test(line.textContent))
+          /Disconnect/i.test(line.textContent))
         line.classList.add('disconnect');
 
       if (line.getAttribute('type') === 'mode')
@@ -119,7 +119,6 @@ Sulaco = {
       if (line.getAttribute('type') === 'join' &&
           /query/i.test(line.textContent))
         line.classList.add('join-query');
-
     },
 
     fixTimeStampFormatting: function(lineNum) {
