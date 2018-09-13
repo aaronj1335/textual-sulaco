@@ -95,31 +95,31 @@ Sulaco = {
         }
     },
 
-    setDescriptiveClassNames: function (lineNum) {
-      var line = Sulaco.getLineEl(lineNum);
-      var nickRe = new RegExp(app.localUserNickname(), 'i');
+    // setDescriptiveClassNames: function (lineNum) {
+    //   var line = Sulaco.getLineEl(lineNum);
+    //   var nickRe = new RegExp(app.localUserNickname(), 'i');
 
-      if (line.getAttribute('type') === 'debug' &&
-          /Disconnect/i.test(line.textContent))
-        line.classList.add('disconnect');
+    //   if (line.getAttribute('type') === 'debug' &&
+    //       /Disconnect/i.test(line.textContent))
+    //     line.classList.add('disconnect');
 
-      if (line.getAttribute('type') === 'mode')
-        line.classList.add('mode');
+    //   if (line.getAttribute('type') === 'mode')
+    //     line.classList.add('mode');
 
-      if (line.getAttribute('type') === 'topic')
-        line.classList.add('topic');
+    //   if (line.getAttribute('type') === 'topic')
+    //     line.classList.add('topic');
 
-      if (line.getAttribute('type') === 'join' && nickRe.test(line.textContent))
-        line.classList.add('aaronj1335-join');
+    //   if (line.getAttribute('type') === 'join' && nickRe.test(line.textContent))
+    //     line.classList.add('aaronj1335-join');
 
-      if (line.getAttribute('type') === 'quit' &&
-          /query/i.test(line.textContent))
-        line.classList.add('quit-query');
+    //   if (line.getAttribute('type') === 'quit' &&
+    //       /query/i.test(line.textContent))
+    //     line.classList.add('quit-query');
 
-      if (line.getAttribute('type') === 'join' &&
-          /query/i.test(line.textContent))
-        line.classList.add('join-query');
-    },
+    //   if (line.getAttribute('type') === 'join' &&
+    //       /query/i.test(line.textContent))
+    //     line.classList.add('join-query');
+    // },
 
     fixTimeStampFormatting: function(lineNum) {
       var line = Sulaco.getLineEl(lineNum);
@@ -146,20 +146,21 @@ Sulaco = {
 // Defined in: "Textual.app -> Contents -> Resources -> JavaScript -> API -> core.js"
 
 Textual.newMessagePostedToView = function (lineNum) {
-    Sulaco.handleBufferPlayback(lineNum);
-    Sulaco.coalesceMessages(lineNum);
-    Sulaco.setDescriptiveClassNames(lineNum);
-    Sulaco.fixTimeStampFormatting(lineNum);
+  Sulaco.handleBufferPlayback(lineNum);
+  Sulaco.coalesceMessages(lineNum);
+  // Sulaco.setDescriptiveClassNames(lineNum);
+  Sulaco.fixTimeStampFormatting(lineNum);
 };
 
 Textual.viewFinishedLoading = function () {
-    Textual.fadeInLoadingScreen(1.00, 0.95);
+  Textual.fadeInLoadingScreen(1.00, 0.95);
 
-    setTimeout(function () {
-        Textual.scrollToBottomOfView();
-    }, 300);
+  setTimeout(function () {
+      Textual.scrollToBottomOfView();
+  }, 300);
 };
 
 Textual.viewFinishedReload = function () {
-    Textual.viewFinishedLoading();
+  Textual.viewFinishedLoading();
 };
+

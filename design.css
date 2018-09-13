@@ -306,3 +306,7 @@ body .sender[type*=normal][colornumber='30'] { color: #b5a0e1; }
 .mode, .topic, .disconnect, .aaronj1335-join, .quit-query, .join-query {
   display: none;
 }
+
+.line.event[type=mode], .line.event[type=topic], .line.event[type=join], .line.event[type=part], .line.event[type=debug] {
+  display: none;
+}
